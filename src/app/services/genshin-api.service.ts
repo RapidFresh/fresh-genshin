@@ -15,7 +15,7 @@ export class GenshinApiService {
   constructor(private http: HttpClient) {}
 
   getListCharacters$ = this.http
-    .get('/api/characters?select={"name":true}', {
+    .get('https://rest.teyvat.dev/characters?select={"name":true}', {
       headers: this.headers,
     })
     .pipe(shareReplay(1));
