@@ -1,0 +1,85 @@
+.character-card {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    .character-image:before {
+      filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.6));
+    }
+
+    .character-info-main {
+      filter: drop-shadow(1px 1px 8px rgba(0, 0, 0, 0.75));
+    }
+  }
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  &:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.4));
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-image: url("/assets/img/temp/portrait.webp");
+    background-repeat: no-repeat;
+    transition-duration: 0.2s;
+    background-position: center;
+  }
+}
+
+.character-info {
+  width: 100%;
+  height: 30px;
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+  display: grid;
+  position: absolute;
+  margin-top: 170px;
+  grid-template-columns: 30px 1fr;
+}
+
+.character-info-side {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.character-vision {
+  width: calc(100% - 9px);
+  height: calc(100% - 9px);
+  margin: 4.5px;
+  background-size: cover;
+}
+
+.character-info-main {
+  width: calc(100% + 15px);
+  height: 100%;
+  text-align: center;
+  mask-image: radial-gradient(
+    circle 10px at 0 14px,
+    transparent 0,
+    transparent 20px,
+    black 21px
+  );
+  margin-left: -15px;
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition-duration: 0.2s;
+
+  > div {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3em;
+    margin-top: 5px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+}

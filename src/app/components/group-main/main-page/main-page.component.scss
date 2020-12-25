@@ -1,0 +1,56 @@
+.main-page {
+  padding: 20px;
+  height: 100vh;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 250px 1fr 1fr;
+
+  > * {
+    overflow-y: auto;
+  }
+
+  > app-detail-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* temp mobile not available */
+
+@media only screen and (max-width: 900px) {
+  .main-page > * {
+    display: none;
+  }
+  .main-page:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    content: "Mobile/Tablet version \A not available yet";
+    z-index: 5;
+    position: absolute;
+    font-size: 2em;
+    line-height: 1em;
+    text-align: center;
+    background: var(--image-gradient-darken), var(--app-background-image);
+    font-weight: 600;
+    white-space: pre;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+    background-size: cover;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .main-page:before {
+    font-size: 1em;
+    line-height: 1em;
+    content: "Mobile/Tablet \A version not \A available yet";
+  }
+}

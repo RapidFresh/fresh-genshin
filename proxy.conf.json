@@ -1,0 +1,11 @@
+{
+    "/api/*":{
+        "target":"https://rest.teyvat.dev",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api": ""
+        }
+    }
+    
+}

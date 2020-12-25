@@ -1,0 +1,7 @@
+app-element-card.active .element-card {
+  transform: scale(0.8) rotate(5deg);
+
+  &:hover {
+    box-shadow: var(--box-shadow-2);
+  }
+}

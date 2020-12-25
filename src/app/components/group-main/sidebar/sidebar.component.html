@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div
+    *ngFor="let entry of navbarEntryes"
+    class="sidebar-entry"
+    [routerLink]="entry.url"
+    routerLinkActive="active"
+  >
+    <div *ngIf="entry.matIcon">
+      <mat-icon>{{ entry.matIcon }}</mat-icon>
+    </div>
+    <div
+      *ngIf="entry.icon"
+      class="sidebar-entry-icon"
+      [style.BackgroundImage]="'url(/assets/img/icons/' + entry.icon + ')'"
+    ></div>
+    <div class="sidebar-entry-label">{{ entry.label }}</div>
+  </div>
+</div>

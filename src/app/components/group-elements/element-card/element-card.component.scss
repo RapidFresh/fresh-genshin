@@ -1,0 +1,44 @@
+.element-card {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  box-shadow: var(--box-shadow-2);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition-duration: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow-4);
+  }
+}
+
+.element-image {
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  filter: brightness(90%);
+  content: "";
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition-duration: 0.2s;
+  background-position: center;
+}
+
+.element-bottom-box {
+  padding-top: 125px;
+}
+
+.element-label {
+  color: rgba(255, 255, 255, 0.9);
+  height: 25px;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.4);
+}

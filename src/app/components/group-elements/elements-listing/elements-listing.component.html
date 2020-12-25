@@ -1,0 +1,8 @@
+<div class="element-listing">
+  <app-element-card
+    *ngFor="let element of elements"
+    (click)="selectElement(element)"
+    [ngClass]="{ active: activeElement?.label === element?.label }"
+    [element]="element"
+  ></app-element-card>
+</div>

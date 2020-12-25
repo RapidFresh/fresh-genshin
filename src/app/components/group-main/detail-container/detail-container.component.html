@@ -1,0 +1,8 @@
+<div class="detail-container">
+  <div *ngIf="detailPage$ | async as detailPage">
+    <app-elements-detail
+      *ngIf="detailPage.page === 'elements'"
+      [data]="detailPage.data"
+    ></app-elements-detail>
+  </div>
+</div>
