@@ -4,7 +4,9 @@
 </div>
 <div *ngIf="element.elementalResonance">
   <h3>Elemental Resonance</h3>
-  <span>{{ element.elementalResonance }}</span>
+  <span *ngFor="let elementalResonance of element.elementalResonance">{{
+    elementalResonance
+  }}</span>
 </div>
 <div>
   <h3>Elemental Reactions</h3>

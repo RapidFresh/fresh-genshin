@@ -15,9 +15,21 @@ export class GenshinApiService {
   constructor(private http: HttpClient) {}
 
   getListCharacters$ = this.http
-    .get('https://rest.teyvat.dev/characters?select={"name":true}', {
-      headers: this.headers,
-    })
+    .get(
+      'https://rest.teyvat.dev/characters?select={"id":true,"name":true,"icon":true}',
+      {
+        headers: this.headers,
+      }
+    )
+    .pipe(shareReplay(1));
+
+  getListProfileImages$ = this.http
+    .get(
+      'https://rest.teyvat.dev/characterProfiles?select={"id":true,"images":true}',
+      {
+        headers: this.headers,
+      }
+    )
     .pipe(shareReplay(1));
 }
 

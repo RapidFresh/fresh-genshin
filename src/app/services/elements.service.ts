@@ -37,8 +37,10 @@ export class ElementsService {
     {
       label: 'Anemo',
       image: './assets/img/elements/anemo-color.webp',
-      elementalResonance:
-        'Decreases Stamina Consumption by 15%.\r\nIncreases Movement SPD by 10%. Shortens Skill CD by 5%.',
+      elementalResonance: [
+        'Decreases Stamina Consumption by 15%.',
+        'Increases Movement SPD by 10%. Shortens Skill CD by 5%.',
+      ],
       reactions: [
         {
           elements: ['Cryo', 'Electro', 'Pyro', 'Hydro'],
@@ -52,8 +54,10 @@ export class ElementsService {
       label: 'Cryo',
       image: './assets/img/elements/cryo-color.webp',
       elementalDebuff: 'Increases stamina consumption.',
-      elementalResonance:
-        'Affected by Electro for 40% less time.\r\nIncreases CRIT Rate against enemies that are Frozen or affected by Cryo by 15%.',
+      elementalResonance: [
+        'Affected by Electro for 40% less time.',
+        'Increases CRIT Rate against enemies that are Frozen or affected by Cryo by 15%.',
+      ],
     },
     {
       label: 'Dendro',
@@ -63,28 +67,35 @@ export class ElementsService {
       label: 'Electro',
       image: './assets/img/elements/electro-color.webp',
       elementalDebuff: 'Continuously drains Energy Recharge.',
-      elementalResonance:
+      elementalResonance: [
         'Affected by Hydro for 40% less time. Superconduct, Overloaded, and Electro-Charged have a 100% chance to generate an Electro Elemental Particle (CD: 5s).',
+      ],
     },
     {
       label: 'Geo',
       image: './assets/img/elements/geo-color.webp',
-      elementalResonance:
-        'Increases resistance to interruption.\r\nWhen protected by a shield, increases Attack DMG by 15%.',
+      elementalResonance: [
+        'Increases resistance to interruption.',
+        'When protected by a shield, increases Attack DMG by 15%.',
+      ],
     },
     {
       label: 'Pyro',
       image: './assets/img/elements/pyro-color.webp',
       elementalDebuff: 'Continuously inflicts damage over time.',
-      elementalResonance:
-        'Affected by Cryo for 40% less time.\r\nIncreases ATK by 25%.',
+      elementalResonance: [
+        'Affected by Cryo for 40% less time.',
+        'Increases ATK by 25%.',
+      ],
     },
     {
       label: 'Hydro',
       image: './assets/img/elements/hydro-color.webp',
       elementalDebuff: 'Increases skill CD durations.',
-      elementalResonance:
-        'Affected by Pyro for 40% less time.\r\nIncreases incoming healing by 30%.',
+      elementalResonance: [
+        'Affected by Pyro for 40% less time.',
+        'Increases incoming healing by 30%.',
+      ],
     },
   ];
 
@@ -97,7 +108,7 @@ export interface Elements {
   reactions?: ElementReaction[];
   statusEffect?: string;
   elementalDebuff?: string;
-  elementalResonance?: string;
+  elementalResonance?: string[];
 }
 
 export interface ElementReaction {

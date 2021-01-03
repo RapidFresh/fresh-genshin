@@ -15,5 +15,7 @@ export class CharacterListingComponent implements OnInit {
 
   characters$ = this.genshinApiService.getListCharacters$;
 
+  profileImages$ = this.genshinApiService.getListProfileImages$;
+
   ngOnInit(): void {}
 }
